@@ -1,6 +1,8 @@
-# uri-solutions
-URI Online Judge Solutions
+# URI Online Judge Solutions
 
-This is one of the programming trainings, used in marathons and disciplines, in the Computer Science course at the Federal University of Ceará.
+https://www.urionlinejudge.com.br/judge/pt/login
+
+
+Website with more than 1000 problems divided into 8 major categories.
 
 Answers posted in different programming languages for the same exercise.
