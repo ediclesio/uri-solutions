@@ -6,14 +6,13 @@ Website with more than 1000 problems divided into 8 major categories.
 
 # Goal
 
-- Train haskell programming
+- I want to exercise functional programming using Haskell.
 
 # Organization
 
-- Each question has an id and the link is at the top of the code, commented.
-- in case you are not finding the question, I suggest you search using CTRL + F.
+- Each question has an ID and the commented link is at the top of the code.
+- In case you are not finding the question, I suggest you search using CTRL + F.
 
 # Important
 
-- Feel free to contribute, whether sending suggestions or even answers, 
-  the important thing is to learn together.
+- Feel free to contribute, sending suggestions or even answers. Thus, we will be learning more.
