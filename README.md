@@ -27,4 +27,4 @@ Se você alterar o arquivo, recarregue-o com:
 
 ##### Importante
 
-Sinta-se livre para contribuir, enviando sugestões ou até respostas. Assim, estaremos aprendendo mais.
+Sinta-se livre para contribuir, envie dicas, sugestões, correções ou mesmo respostas. Assim, estaremos aprendendo mais.
