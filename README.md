@@ -2,17 +2,29 @@
 
 https://www.urionlinejudge.com.br/judge/pt/login
 
-Website with more than 1000 problems divided into 8 major categories.
+##### Objetivo
 
-##### Goal
+Postar os códigos Haskell que usei para resolver problemas no site da URI, que é onde eu gosto de exercitar programação.
 
-- I want to exercise functional programming using Haskell.
+##### Organização
 
-##### Organization
+Cada problema tem um ID, exemplo 1001.hs, e sua respectiva descrição está no link comentado na parte superior do código.
+Todos os exercícios estão no formato de lista dentro da pasta 'haskell'. Assim, fica fácil pesquisar no navegador usando o atalho CTRL + F.
 
-- Each question has an ID and the commented link is at the top of the code.
-- In case you are not finding the question, I suggest you search using CTRL + F.
+##### Como usar
 
-##### Important
+Instale o Haskell: https://www.haskell.org/downloads/
 
-- Feel free to contribute, sending suggestions or even answers. Thus, we will be learning more.
+Baixe o código que você deseja.
+Vá para a pasta do exercício e execute os comandos no terminal:
+
+- ghci
+- :load num_exercise.hs
+- main
+
+Se você alterar o arquivo, recarregue-o com:
+- :r
+
+##### Importante
+
+Sinta-se livre para contribuir, enviando sugestões ou até respostas. Assim, estaremos aprendendo mais.
