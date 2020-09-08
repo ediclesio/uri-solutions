@@ -4,21 +4,17 @@
 import Data.Char
 import System.IO (isEOF)
 
-mostra :: String -> Bool -> IO ()
-mostra [] _ = putStrLn ""
-mostra (a:as) lower | isLetter a && lower = do putStr ([toUpper a])
-                                               mostra as False
-                    | isLetter a = do putStr ([toLower a])
-                                      mostra as True
-                    | otherwise = do putStr [a]
-                                     mostra as lower
+convert :: String -> Bool -> String
+convert [] _ = []
+convert (a:as) c | a == ' ' = a : convert as c
+                 | c = toUpper a : convert as False
+                 | otherwise = toLower a : convert as True
 
 main :: IO ()
 main = do end <- isEOF
           if end
            then return ()
-           else do str <- getLine
-                   if str /= ""
-                    then do mostra str True
-                            main
+           else do input <- getLine
+                   if length input > 0
+                    then putStrLn (convert input True) >> main
                     else return ()

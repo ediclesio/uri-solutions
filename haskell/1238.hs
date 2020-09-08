@@ -1,21 +1,21 @@
 
 -- https://www.urionlinejudge.com.br/judge/pt/problems/view/1238
 
-combinador :: String -> String -> String
-combinador [] [] = []
-combinador (a:as) [] = a:(combinador as [])
-combinador [] (b:bs) = b:(combinador [] bs)
-combinador (a:as) (b:bs) = a:b:(combinador as bs)
+merge :: String -> String -> String
+merge [] [] = []
+merge a [] = a
+merge [] b = b
+merge (a:as) (b:bs) = a:b:(merge as bs)
 
-repete :: Int -> IO ()
-repete 0 = return ()
-repete n = do input <- getLine
-              let strs = words input
-                  a = (strs !! 0)
-                  b = (strs !! 1)
-              putStrLn (combinador a b)
-              repete (n-1)
+loop :: Int -> IO ()
+loop 0 = return ()
+loop n = do input <- getLine
+            let arr = words input
+                a = (arr !! 0)
+                b = (arr !! 1)
+            putStrLn (merge a b)
+            loop (n-1)
 
 main :: IO ()
-main = do num <- readLn :: IO Int
-          repete num
+main = do n <- readLn :: IO Int
+          loop n

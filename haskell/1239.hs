@@ -3,28 +3,24 @@
 
 import System.IO (isEOF)
 
-mostra :: String -> Int -> Int -> IO ()
-mostra [] _ _ = putStrLn ""
-mostra (a:as) i b | a == '_' = if i == 0 
-                                then do putStr "<i>"
-                                        mostra as (i+1) b
-                                else do putStr "</i>"
-                                        mostra as (i-1) b
-                  
-                  | a == '*' = if b == 0
-                                then do putStr "<b>"
-                                        mostra as i (b+1)
-                                else do putStr "</b>"
-                                        mostra as i (b-1)
-                  | otherwise = do putStr [a]
-                                   mostra as i b
+iOpen = "<i>"
+iClose = "</i>"
+bOpen = "<b>"
+bClose = "</b>"
+
+convert :: String -> Int -> Int -> String
+convert [] _ _ = []
+convert (a:as) i b | a == '_' && i == 0 = iOpen ++ convert as (i+1) b
+                   | a == '_' && i > 0 = iClose ++ convert as (i-1) b
+                   | a == '*' && b == 0 = bOpen ++ convert as i (b+1)
+                   | a == '*' && b > 0 = bClose ++ convert as i (b-1)
+                   | otherwise = a : convert as i b
 
 main :: IO ()
 main = do end <- isEOF
           if end
            then return ()
-           else do str <- getLine
-                   if str /= ""
-                    then do mostra str 0 0
-                            main
+           else do input <- getLine
+                   if length input > 0
+                    then putStrLn (convert input 0 0) >> main
                     else return ()
