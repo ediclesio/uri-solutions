@@ -4,7 +4,7 @@ https://www.urionlinejudge.com.br/judge/pt/login
 
 ##### Objetivo
 
-Postar os códigos Haskell que usei para resolver problemas no site da URI.
+Postar os códigos Haskell que usei para resolver problemas do site.
 
 ##### Organização
 
